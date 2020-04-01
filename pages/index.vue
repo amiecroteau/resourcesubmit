@@ -1,22 +1,22 @@
 <template>
   <div class="container">
-    <div class="row">
-      <h3 class="subtitle">
-        Resource information
-      </h3>
-    </div>
-    <div class="row">
+    <column>
+      <row>
+        <h3 class="subtitle">
+          Resource information
+        </h3>
+      </row>
       <h2 class="title">
         Share your favorite link so I can add to a master list
       </h2>
-    </div>
-    <div class="column">
+
       <form
         name="contact"
         action="/thank-you"
         netlify-honeypot="bot-field"
         method="post"
         netlify
+        class="title"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">
@@ -26,10 +26,7 @@
           Name:
         </label>
         <input class="form-field" name="name" id="name" />
-        <label class="form-label" for="email">
-          Email:
-        </label>
-        <input class="form-field" name="email" id="email" />
+
         <label class="form-label" for="link">
           Https Link:
         </label>
@@ -37,7 +34,7 @@
 
         <input class="form-button" type="submit" value="Send message" />
       </form>
-    </div>
+    </column>
   </div>
 </template>
 
@@ -52,12 +49,11 @@ export default {
   display: none;
 }
 .container {
-  min-height: 500vh;
+  min-height: 100vh;
   display: flex;
-
-  align-items: flex-start;
-  text-align: left;
-  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .title {

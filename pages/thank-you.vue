@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <h1 class="title">
-      Thank You
-    </h1>
+  <div class="container">
+    <div class="my-2">
+      <h1 class="title">
+        Thank You for the submission.
+      </h1>
+      <a class="button--green" href="/">Back to Home</a>
+    </div>
   </div>
 </template>
 <style>
@@ -25,6 +28,7 @@
   font-size: 20px;
   color: #35495e;
   letter-spacing: 1px;
+  padding: 15px;
 }
 
 .subtitle {
