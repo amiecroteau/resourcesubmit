@@ -1,9 +1,16 @@
 <template>
-  <div>
-    <h1 class="title">
-      Contact
-    </h1>
-    <div class="content">
+  <div class="container">
+    <div class="row">
+      <h3 class="subtitle">
+        Resource information
+      </h3>
+    </div>
+    <div class="row">
+      <h2 class="title">
+        Share your favorite link so I can add to a master list
+      </h2>
+    </div>
+    <div class="column">
       <form
         name="contact"
         action="/thank-you"
@@ -23,35 +30,20 @@
           Email:
         </label>
         <input class="form-field" name="email" id="email" />
-        <label class="form-label" for="message">
-          Message:
+        <label class="form-label" for="link">
+          Https Link:
         </label>
-        <textarea class="form-field" name="message" id="message"></textarea>
+        <input class="form-field" name="link" id="message" />
+
         <input class="form-button" type="submit" value="Send message" />
       </form>
-    </div>
-
-    <div class="links">
-      <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-        >Documentation</a
-      >
-      <a
-        href="https://github.com/nuxt/nuxt.js"
-        target="_blank"
-        class="button--grey"
-        >GitHub</a
-      >
     </div>
   </div>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue";
-
 export default {
-  components: {
-    AppLogo
-  }
+  components: {}
 };
 </script>
 
@@ -60,11 +52,12 @@ export default {
   display: none;
 }
 .container {
-  min-height: 100vh;
+  min-height: 500vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+  align-items: flex-start;
+  text-align: left;
+  padding: 50px;
 }
 
 .title {
@@ -72,7 +65,7 @@ export default {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 20px;
   color: #35495e;
   letter-spacing: 1px;
 }
